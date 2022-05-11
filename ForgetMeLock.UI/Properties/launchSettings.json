@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ForgetMeLock.UI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ForgetMeLock.UI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
