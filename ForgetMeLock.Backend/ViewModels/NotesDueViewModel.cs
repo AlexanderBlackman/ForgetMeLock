@@ -8,7 +8,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace ForgetMeLock.Backend.ViewModels
 {
-    internal class NotesDueViewModel
+    public class NotesDueViewModel
     {
     }
 }

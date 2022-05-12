@@ -117,12 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Angry.Text" xml:space="preserve">
+    <value>Angry</value>
+  </data>
   <data name="DeleteDialog.Text" xml:space="preserve">
     <value>Are you sure?
  **This is unreversable.**</value>
   </data>
   <data name="didh" xml:space="preserve">
     <value>What is the name of the note?</value>
+  </data>
+  <data name="Frustrated.Text" xml:space="preserve">
+    <value>Frustrated</value>
+  </data>
+  <data name="Happy.Text" xml:space="preserve">
+    <value>Happy</value>
+  </data>
+  <data name="Lovestruck.Text" xml:space="preserve">
+    <value>Lovestruck</value>
   </data>
   <data name="NewNoteDialog.CloseButtonText" xml:space="preserve">
     <value>Continue editing</value>
@@ -146,7 +158,13 @@ reminded?</value>
   <data name="NewNoteTitle.PlaceholderText" xml:space="preserve">
     <value>What is the name of the note?</value>
   </data>
+  <data name="Sad.Text" xml:space="preserve">
+    <value>Sad</value>
+  </data>
   <data name="StoreNoteDialog.Text" xml:space="preserve">
     <value>Are you sure? The note will be hidden for until</value>
+  </data>
+  <data name="Worried.Text" xml:space="preserve">
+    <value>Worried</value>
   </data>
 </root>

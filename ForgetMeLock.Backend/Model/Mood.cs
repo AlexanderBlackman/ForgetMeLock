@@ -11,9 +11,9 @@ namespace ForgetMeLock.Backend.Model
         Happy,
         Sad,
         Worried,
+        Lovestruck,
         Angry,
         Frustrated,
-        Lovestruck,
-        Exhausted
+
     }
 }

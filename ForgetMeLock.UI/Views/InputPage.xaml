@@ -10,22 +10,94 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="root">
-        <StackPanel >
-            <tk:MarkdownTextBlock x:Uid="NewNoteHeader"/>
-            <TextBox x:Uid="NewNoteTitle" BorderThickness="3" BorderBrush="Gray"/>
-            <uc:MarkdownInputBox Height="300" HorizontalAlignment="Stretch" Margin="20" MinWidth="300"
+    <Grid x:Name="root" 
+          Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <tk:MarkdownTextBlock x:Uid="NewNoteHeader" HorizontalAlignment="Center" Grid.Row="0"/>
+        <TextBox x:Uid="NewNoteTitle" BorderThickness="3" BorderBrush="Gray" Grid.Row="1"/>
+        <uc:MarkdownInputBox Grid.Row="2"  HorizontalAlignment="Center" Margin="40 10" MinWidth="300" 
                              Background="Red"/>
-            <tk:MarkdownTextBlock x:Uid="NewNoteDueTime"/>
 
-            <CalendarDatePicker />
-
-            <tk:MarkdownTextBlock x:Uid="NewNoteStateOfMind"/>
-            <ComboBox>
-                <ComboBoxItem Content="meh"/>
-                <ComboBoxItem Content="bah"/>
-            </ComboBox>
+        <tk:MarkdownTextBlock x:Uid="NewNoteStateOfMind" Grid.Row="4"/>
+        <!--<ComboBox Grid.Row="5">
+            <ComboBoxItem Content="meh"/>
+            <ComboBoxItem Content="bah"/>
+        </ComboBox>-->
+        <StackPanel Grid.Row="5" Orientation="Horizontal" x:Name="MoodSelectSP">
+            <ToggleButton x:Name="HappyButton" Click="MoodSelectClick" Margin="5 0">
+                <ToggleButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="😊" FontSize="40"/>
+                        <TextBlock x:Uid="Happy" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton.Content>
+            </ToggleButton>
+            <ToggleButton x:Name="SadButton" Click="MoodSelectClick"   Margin="5 0">
+                <ToggleButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="😭" FontSize="40"/>
+                        <TextBlock x:Uid="Sad" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton.Content>
+            </ToggleButton>
+            <ToggleButton x:Name="WorriedButton" Click="MoodSelectClick" Margin="5 0">
+                <ToggleButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="😟" FontSize="40"/>
+                        <TextBlock x:Uid="Worried" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton.Content>
+            </ToggleButton>
+            <ToggleButton x:Name="LovestruckButton" Click="MoodSelectClick" Margin="5 0">
+                <ToggleButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="😍" FontSize="40"/>
+                        <TextBlock x:Uid="Lovestruck" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton.Content>
+            </ToggleButton>
+            <ToggleButton x:Name="AngryButton" Click="MoodSelectClick" Margin="5 0">
+                <ToggleButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="😡" FontSize="40"/>
+                        <TextBlock x:Uid="Angry" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton.Content>
+            </ToggleButton>
+            <ToggleButton x:Name="FrustratedButton" Click="MoodSelectClick"  Margin="5 0">
+                <ToggleButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="🙄" FontSize="40"/>
+                        <TextBlock x:Uid="Frustrated" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ToggleButton.Content>
+            </ToggleButton>
         </StackPanel>
+
+
+        <tk:MarkdownTextBlock x:Uid="NewNoteDueTime" Grid.Row="6"/>
+
+        <CalendarDatePicker Grid.Row="7" />
+        <RadioButtons>
+            <RadioButtons.Resources>
+                <Style TargetType="RadioButton" BasedOn="{StaticResource ToggleButtonRevealStyle}"/>
+
+
+        </RadioButtons>
+
+
+
+
         <ContentDialog x:Name="saveNoteConfirmDialog"
                        x:Uid="NewNoteDialog">
             <StackPanel>
@@ -37,6 +109,7 @@
                        x:Uid="NewNoteDialog">
             <tk:MarkdownTextBlock x:Uid="DeleteNoteDialog"/>
         </ContentDialog>
+
 
     </Grid>
 

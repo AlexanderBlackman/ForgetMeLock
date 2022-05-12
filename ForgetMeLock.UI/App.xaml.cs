@@ -1,4 +1,8 @@
-﻿using Microsoft.UI.Xaml;
+﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using ForgetMeLock.Backend.Contracts;
+using ForgetMeLock.Backend.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -16,6 +20,10 @@ using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
+using ForgetMeLock.Backend.Data;
+using ForgetMeLock.Backend.ViewModels;
+
+
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
@@ -32,8 +40,16 @@ namespace ForgetMeLock.UI
         /// </summary>
         public App()
         {
+
             this.InitializeComponent();
+            Ioc.Default.ConfigureServices(new ServiceCollection()
+                .AddSingleton<IDataService, SqliteDS>()
+                .AddTransient<NotesDueViewModel>()
+                .AddTransient<InputViewModel>()
+                .BuildServiceProvider());
         }
+
+
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

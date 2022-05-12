@@ -1,4 +1,6 @@
-﻿using Microsoft.UI.Xaml;
+﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using ForgetMeLock.Backend.ViewModels;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -23,9 +25,30 @@ namespace ForgetMeLock.UI.Views
     /// </summary>
     public sealed partial class InputPage : Page
     {
+        public InputViewModel ViewModel { get; }
         public InputPage()
         {
             this.InitializeComponent();
+            ViewModel = Ioc.Default.GetService<InputViewModel>();
+
+        }
+
+        //private void HappyClick(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+        //private void HappyClick(object sender, RoutedEventArgs e) => ViewModel.selectedMood = Backend.Model.Mood.Happy;
+        //private void SadClick(object sender, RoutedEventArgs e) => ViewModel.selectedMood = Backend.Model.Mood.Sad;
+        //private void WorriedClick(object sender, RoutedEventArgs e) => ViewModel.selectedMood = Backend.Model.Mood.Worried;
+        //private void HappyClick(object sender, RoutedEventArgs e) => ViewModel.selectedMood = Backend.Model.Mood.Lovestruck;
+
+        private void MoodSelectClick(object sender, RoutedEventArgs e)
+        {
+            Button selected = (Button)sender;
+            foreach (Button button in MoodSelectSP.Children)
+            {
+                button.IsEnabled = false;
+            }
         }
     }
 }

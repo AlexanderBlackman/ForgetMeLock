@@ -9,10 +9,13 @@
 
     <Grid >
 
+
         <StackPanel Orientation="Horizontal">
             <TextBox
                 x:Name="rawInputBox"
+                HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
+                Width="1000"
                 AcceptsReturn="True"
                 IsSpellCheckEnabled="True" 
                 FontSize="16"

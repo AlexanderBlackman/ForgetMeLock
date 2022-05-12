@@ -6,14 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using ForgetMeLock.Backend.Model;
 using ForgetMeLock.Backend.Data;
+using Microsoft.EntityFrameworkCore;
+using ForgetMeLock.Backend.Contracts;
 
 namespace ForgetMeLock.Backend.Services
 {
-    public class SqliteDS
+    public class SqliteDS : IDataService
     {
         private readonly NoteContext context;
 
-        public SqliteDS (NoteContext dbContext)
+        public SqliteDS(NoteContext dbContext)
         {
             this.context = dbContext;
             this.context.Database.EnsureCreated();
@@ -32,7 +34,7 @@ namespace ForgetMeLock.Backend.Services
         public async Task UpsertAsync(Note note)
         {
             //obviously this forbids last name changes
-            await this.context.Notes.Upsert(note).On(e => new { e.FirstName, e.LastName }).RunAsync();
+            await this.context.Notes.Upsert(note).On(e => new { e.Title, e.Content }).RunAsync();
 
         }
 
