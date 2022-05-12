@@ -9,4 +9,5 @@ Intended Process:
 3. Otherwise, show a new note entry panel, where they can write a note, state their current emotional state and give a date to hide until.
 4. 
 ![emotion bar](https://user-images.githubusercontent.com/51733876/168004454-28fa2695-1789-464f-8200-d90a9cbfd136.png)
+
 (This is actually a restyled radio button control)
