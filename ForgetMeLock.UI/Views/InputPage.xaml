@@ -24,76 +24,82 @@
         </Grid.RowDefinitions>
 
         <tk:MarkdownTextBlock x:Uid="NewNoteHeader" HorizontalAlignment="Center" Grid.Row="0"/>
-        <TextBox x:Uid="NewNoteTitle" BorderThickness="3" BorderBrush="Gray" Grid.Row="1"/>
-        <uc:MarkdownInputBox Grid.Row="2"  HorizontalAlignment="Center" Margin="40 10" MinWidth="300" 
+        <TextBox x:Uid="NewNoteTitle" BorderThickness="3" BorderBrush="Gray" Grid.Row="1" Margin="40 0 40 0"/>
+        <uc:MarkdownInputBox Grid.Row="2"  HorizontalAlignment="Center" Margin="20 10" MinWidth="300" 
                              Background="Red"/>
 
-        <tk:MarkdownTextBlock x:Uid="NewNoteStateOfMind" Grid.Row="4"/>
-        <!--<ComboBox Grid.Row="5">
-            <ComboBoxItem Content="meh"/>
-            <ComboBoxItem Content="bah"/>
-        </ComboBox>-->
-        <StackPanel Grid.Row="5" Orientation="Horizontal" x:Name="MoodSelectSP">
-            <ToggleButton x:Name="HappyButton" Click="MoodSelectClick" Margin="5 0">
-                <ToggleButton.Content>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="😊" FontSize="40"/>
+        <tk:MarkdownTextBlock x:Uid="NewNoteStateOfMind" Grid.Row="4" HorizontalAlignment="Center"/>
+
+
+        <RadioButtons Grid.Row="5"  x:Name="MoodSelectRB" 
+                      SelectionChanged="MoodSelectRB_SelectionChanged"
+                      MaxColumns="6" HorizontalAlignment="Center" Margin="0 0 0 10">
+            <RadioButtons.Resources>
+                <Style TargetType="RadioButton" BasedOn="{StaticResource DefaultToggleButtonStyle}">
+                    <Setter Property="MinWidth" Value="50"/>
+                </Style>
+
+            </RadioButtons.Resources>
+            <RadioButton Tag="Happy"  >
+                <RadioButton.Content>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <TextBlock Text="😊" FontSize="50"/>
                         <TextBlock x:Uid="Happy" HorizontalAlignment="Center"/>
                     </StackPanel>
-                </ToggleButton.Content>
-            </ToggleButton>
-            <ToggleButton x:Name="SadButton" Click="MoodSelectClick"   Margin="5 0">
-                <ToggleButton.Content>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Tag="Sad"  >
+                <RadioButton.Content>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="😭" FontSize="40"/>
+                        <TextBlock Text="😭" FontSize="50"/>
                         <TextBlock x:Uid="Sad" HorizontalAlignment="Center"/>
                     </StackPanel>
-                </ToggleButton.Content>
-            </ToggleButton>
-            <ToggleButton x:Name="WorriedButton" Click="MoodSelectClick" Margin="5 0">
-                <ToggleButton.Content>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Tag="Worried">
+                <RadioButton.Content>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="😟" FontSize="40"/>
+                        <TextBlock Text="😟" FontSize="50"/>
                         <TextBlock x:Uid="Worried" HorizontalAlignment="Center"/>
                     </StackPanel>
-                </ToggleButton.Content>
-            </ToggleButton>
-            <ToggleButton x:Name="LovestruckButton" Click="MoodSelectClick" Margin="5 0">
-                <ToggleButton.Content>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Tag="Lovestruck"  >
+                <RadioButton.Content>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="😍" FontSize="40"/>
+                        <TextBlock Text="😍" FontSize="50"/>
                         <TextBlock x:Uid="Lovestruck" HorizontalAlignment="Center"/>
                     </StackPanel>
-                </ToggleButton.Content>
-            </ToggleButton>
-            <ToggleButton x:Name="AngryButton" Click="MoodSelectClick" Margin="5 0">
-                <ToggleButton.Content>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Tag="Angry"  >
+                <RadioButton.Content>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="😡" FontSize="40"/>
+                        <TextBlock Text="😡" FontSize="50"/>
                         <TextBlock x:Uid="Angry" HorizontalAlignment="Center"/>
                     </StackPanel>
-                </ToggleButton.Content>
-            </ToggleButton>
-            <ToggleButton x:Name="FrustratedButton" Click="MoodSelectClick"  Margin="5 0">
-                <ToggleButton.Content>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Tag="Frustrated"  >
+                <RadioButton.Content>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="🙄" FontSize="40"/>
+                        <TextBlock Text="🙄" FontSize="50"/>
                         <TextBlock x:Uid="Frustrated" HorizontalAlignment="Center"/>
                     </StackPanel>
-                </ToggleButton.Content>
-            </ToggleButton>
-        </StackPanel>
-
-
-        <tk:MarkdownTextBlock x:Uid="NewNoteDueTime" Grid.Row="6"/>
-
-        <CalendarDatePicker Grid.Row="7" />
-        <RadioButtons>
-            <RadioButtons.Resources>
-                <Style TargetType="RadioButton" BasedOn="{StaticResource ToggleButtonRevealStyle}"/>
-
-
+                </RadioButton.Content>
+            </RadioButton>
         </RadioButtons>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="6" HorizontalAlignment="Center">
+
+
+
+            <CalendarDatePicker x:Uid="DateSelect" Height="50" FontSize="20"/>
+            <Button x:Name="SubmitNoteButton" x:Uid="SubmitNoteButton" 
+                    Height="50"  FontSize="20" Margin="10 0 0 0"
+                    
+                    Background="{StaticResource SystemAccentColorDark1}"/>
+        </StackPanel>
 
 
 

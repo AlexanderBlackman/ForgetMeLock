@@ -2,6 +2,7 @@
 using ForgetMeLock.Backend.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using ForgetMeLock.Backend.Model;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
@@ -44,10 +45,29 @@ namespace ForgetMeLock.UI.Views
 
         private void MoodSelectClick(object sender, RoutedEventArgs e)
         {
-            Button selected = (Button)sender;
-            foreach (Button button in MoodSelectSP.Children)
+            //Button selected = (Button)sender;
+            //foreach (Button button in MoodSelectSP.Children)
+            //{
+            //    button.IsEnabled = false;
+            //}
+        }
+
+        private void MoodSelectRB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is RadioButtons rb)
             {
-                button.IsEnabled = false;
+                String mood = (String)rb.Tag;
+
+                ViewModel.selectedMood = mood switch
+                {
+                    "Happy" => Mood.Happy,
+                    "Sad" => Mood.Sad,
+                    "Worried" => Mood.Worried,
+                    "Lovestruck" => Mood.Lovestruck,
+                    "Angry" => Mood.Angry,
+                    _ => Mood.Frustrated
+                };
+
             }
         }
     }
