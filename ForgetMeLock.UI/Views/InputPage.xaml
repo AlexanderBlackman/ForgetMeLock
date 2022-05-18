@@ -24,9 +24,13 @@
         </Grid.RowDefinitions>
 
         <tk:MarkdownTextBlock x:Uid="NewNoteHeader" HorizontalAlignment="Center" Grid.Row="0"/>
-        <TextBox x:Uid="NewNoteTitle" BorderThickness="3" BorderBrush="Gray" Grid.Row="1" Margin="40 0 40 0"/>
+        <TextBox x:Uid="NewNoteTitle" 
+                 BorderThickness="3" BorderBrush="Gray" 
+                 Grid.Row="1" Margin="40 0 40 0"
+                 Text="{x:Bind ViewModel.CurrentNote.Title, Mode=TwoWay}"/>
         <uc:MarkdownInputBox Grid.Row="2"  HorizontalAlignment="Center" Margin="20 10" MinWidth="300" 
-                             Background="Red"/>
+                             Background="Red"
+                              />
 
         <tk:MarkdownTextBlock x:Uid="NewNoteStateOfMind" Grid.Row="4" HorizontalAlignment="Center"/>
 
@@ -96,6 +100,7 @@
 
             <CalendarDatePicker x:Uid="DateSelect" Height="50" FontSize="20"/>
             <Button x:Name="SubmitNoteButton" x:Uid="SubmitNoteButton" 
+                    Click="SubmitNoteButton_Click"
                     Height="50"  FontSize="20" Margin="10 0 0 0"
                     
                     Background="{StaticResource SystemAccentColorDark1}"/>

@@ -30,6 +30,7 @@
                 AcceptsReturn="True"
                 IsSpellCheckEnabled="True" 
                 FontSize="16"
+                Text="{}"
                 />
         </Grid>
     </SplitView>

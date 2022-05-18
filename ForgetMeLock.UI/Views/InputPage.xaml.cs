@@ -52,23 +52,11 @@ namespace ForgetMeLock.UI.Views
             //}
         }
 
-        private void MoodSelectRB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+
+        private void SubmitNoteButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is RadioButtons rb)
-            {
-                String mood = (String)rb.Tag;
 
-                ViewModel.selectedMood = mood switch
-                {
-                    "Happy" => Mood.Happy,
-                    "Sad" => Mood.Sad,
-                    "Worried" => Mood.Worried,
-                    "Lovestruck" => Mood.Lovestruck,
-                    "Angry" => Mood.Angry,
-                    _ => Mood.Frustrated
-                };
-
-            }
         }
     }
 }
