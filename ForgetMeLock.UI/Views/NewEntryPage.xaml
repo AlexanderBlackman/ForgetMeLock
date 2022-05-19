@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="ForgetMeLock.UI.Views.InputPage"
+    x:Class="ForgetMeLock.UI.Views.NewEntryPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ForgetMeLock.UI.Views"
@@ -100,9 +100,9 @@
 
             <CalendarDatePicker x:Uid="DateSelect" Height="50" FontSize="20"/>
             <Button x:Name="SubmitNoteButton" x:Uid="SubmitNoteButton" 
-                    Click="SubmitNoteButton_Click"
-                    Height="50"  FontSize="20" Margin="10 0 0 0"
-                    
+
+                Height="50"  FontSize="20" Margin="10 0 0 0"
+                                        Click="SubmitNoteButton_Click"
                     Background="{StaticResource SystemAccentColorDark1}"/>
         </StackPanel>
 
@@ -123,6 +123,4 @@
 
 
     </Grid>
-
-
 </Page>

@@ -15,6 +15,7 @@
 	<ItemGroup>
 		<None Remove="UserControls\MarkdownInputBox.xaml" />
 		<None Remove="Views\InputPage.xaml" />
+		<None Remove="Views\NewEntryPage.xaml" />
 		<None Remove="Views\NotesDuePage.xaml" />
 	</ItemGroup>
 
@@ -46,6 +47,11 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\ForgetMeLock.Backend\ForgetMeLock.Backend.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="Views\NewEntryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
 	</ItemGroup>
 	<ItemGroup>
 		<Page Update="Views\NotesDuePage.xaml">

@@ -120,6 +120,9 @@
   <data name="Angry.Text" xml:space="preserve">
     <value>Angry</value>
   </data>
+  <data name="DateSelect.PlaceholderText" xml:space="preserve">
+    <value>Hide until</value>
+  </data>
   <data name="DeleteDialog.Text" xml:space="preserve">
     <value>Are you sure?
  **This is unreversable.**</value>
@@ -163,6 +166,9 @@ reminded?</value>
   </data>
   <data name="StoreNoteDialog.Text" xml:space="preserve">
     <value>Are you sure? The note will be hidden for until</value>
+  </data>
+  <data name="SubmitNoteButton.Content" xml:space="preserve">
+    <value>Submit</value>
   </data>
   <data name="Worried.Text" xml:space="preserve">
     <value>Worried</value>

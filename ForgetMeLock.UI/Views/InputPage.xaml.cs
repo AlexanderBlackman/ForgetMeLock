@@ -2,6 +2,7 @@
 using ForgetMeLock.Backend.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using ForgetMeLock.Backend.Model;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
@@ -44,11 +45,18 @@ namespace ForgetMeLock.UI.Views
 
         private void MoodSelectClick(object sender, RoutedEventArgs e)
         {
-            Button selected = (Button)sender;
-            foreach (Button button in MoodSelectSP.Children)
-            {
-                button.IsEnabled = false;
-            }
+            //Button selected = (Button)sender;
+            //foreach (Button button in MoodSelectSP.Children)
+            //{
+            //    button.IsEnabled = false;
+            //}
+        }
+
+
+
+        private void SubmitNoteButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

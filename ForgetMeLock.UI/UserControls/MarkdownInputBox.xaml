@@ -7,10 +7,21 @@
     xmlns:tk="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d">
 
-    <Grid >
 
 
-        <StackPanel Orientation="Horizontal">
+    <SplitView IsPaneOpen="True"
+               PanePlacement="Right"
+               Visibility="Visible"
+               >
+        <SplitView.Pane>
+            <tk:MarkdownTextBlock
+            x:Name= "markdownOutput"
+            VerticalAlignment="Stretch" 
+             FontSize="16"   
+             />
+        </SplitView.Pane>
+
+        <Grid>
             <TextBox
                 x:Name="rawInputBox"
                 HorizontalAlignment="Stretch"
@@ -19,7 +30,15 @@
                 AcceptsReturn="True"
                 IsSpellCheckEnabled="True" 
                 FontSize="16"
+                Text="{}"
                 />
+        </Grid>
+    </SplitView>
+    <!--<Grid >
+
+
+        <StackPanel Orientation="Horizontal">
+
 
 
             <tk:MarkdownTextBlock
@@ -31,5 +50,5 @@
 
 
 
-    </Grid>
+    </Grid>-->
 </UserControl>

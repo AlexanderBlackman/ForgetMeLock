@@ -11,7 +11,8 @@
     Width="800"
     Height="1200"
     >
+    <views:NewEntryPage/>
+    <!--<views:InputPage/>-->
     <!--<views:NotesDuePage/>-->
-    <views:InputPage/>
 
 </winuiex:WindowEx>
