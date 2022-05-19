@@ -30,7 +30,7 @@
                   HorizontalAlignment="Center"
                   
                   Margin="20"
-                  Background="Blue">
+                 Background="{ThemeResource FocusStrokeColorInner}">
             <FlipView.ItemTemplate >
                 <DataTemplate x:DataType="model:Note">
                     <StackPanel>
