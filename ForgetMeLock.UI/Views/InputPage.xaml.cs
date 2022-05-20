@@ -34,23 +34,6 @@ namespace ForgetMeLock.UI.Views
 
         }
 
-        //private void HappyClick(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-        //private void HappyClick(object sender, RoutedEventArgs e) => ViewModel.selectedMood = Backend.Model.Mood.Happy;
-        //private void SadClick(object sender, RoutedEventArgs e) => ViewModel.selectedMood = Backend.Model.Mood.Sad;
-        //private void WorriedClick(object sender, RoutedEventArgs e) => ViewModel.selectedMood = Backend.Model.Mood.Worried;
-        //private void HappyClick(object sender, RoutedEventArgs e) => ViewModel.selectedMood = Backend.Model.Mood.Lovestruck;
-
-        private void MoodSelectClick(object sender, RoutedEventArgs e)
-        {
-            //Button selected = (Button)sender;
-            //foreach (Button button in MoodSelectSP.Children)
-            //{
-            //    button.IsEnabled = false;
-            //}
-        }
 
 
 

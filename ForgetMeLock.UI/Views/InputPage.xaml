@@ -28,9 +28,9 @@
                  BorderThickness="3" BorderBrush="Gray" 
                  Grid.Row="1" Margin="40 0 40 0"
                  Text="mooo"/>
-        <uc:MarkdownInputBox Grid.Row="2"  HorizontalAlignment="Center" Margin="20 10" MinWidth="300" 
+        <!--<uc:MarkdownInputBox Grid.Row="2"  HorizontalAlignment="Center" Margin="20 10" MinWidth="300" 
                              Background="Red"
-                              />
+                              />-->
 
         <tk:MarkdownTextBlock x:Uid="NewNoteStateOfMind" Grid.Row="4" HorizontalAlignment="Center"/>
 

@@ -1,7 +1,9 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using ForgetMeLock.Backend.Model;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Markup;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
@@ -18,11 +20,26 @@ using Windows.Foundation.Collections;
 
 namespace ForgetMeLock.UI.UserControls
 {
+    [ContentProperty(Name = nameof(Note))]
     public sealed partial class MarkdownInputBox : UserControl
     {
         public MarkdownInputBox()
         {
             this.InitializeComponent();
         }
+
+        public static readonly DependencyProperty NoteProperty =
+            DependencyProperty.Register("Note", typeof(Note), typeof(MarkdownInputBox),
+                new PropertyMetadata(null));
+
+
+
+        public Note Note
+        {
+            get { return (Note)GetValue(NoteProperty); }
+            set { SetValue(NoteProperty, value); }
+        }
+
+
     }
 }

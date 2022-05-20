@@ -1,4 +1,6 @@
-﻿using Microsoft.UI.Xaml;
+﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using ForgetMeLock.Backend.ViewModels;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -23,9 +25,12 @@ namespace ForgetMeLock.UI.Views
     /// </summary>
     public sealed partial class NewEntryPage : Page
     {
+        //public InputViewModel ViewModel { get; }
         public NewEntryPage()
         {
             this.InitializeComponent();
+            //ViewModel = Ioc.Default.GetService<InputViewModel>();
+
         }
 
         private void SubmitNoteButton_Click(object sender, RoutedEventArgs e)
