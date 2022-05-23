@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgetMeLock.UI", "ForgetMeLock.UI\ForgetMeLock.UI.csproj", "{3CE1B8F2-A68A-4225-A26D-DBAF6118B856}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForgetMeLock.UI", "ForgetMeLock.UI\ForgetMeLock.UI.csproj", "{3CE1B8F2-A68A-4225-A26D-DBAF6118B856}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgetMeLock.Backend", "ForgetMeLock.Backend\ForgetMeLock.Backend.csproj", "{FC062592-5005-471A-8FC6-6E50D12CD35B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForgetMeLock.Backend", "ForgetMeLock.Backend\ForgetMeLock.Backend.csproj", "{FC062592-5005-471A-8FC6-6E50D12CD35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{C8838321-5954-4735-B0EF-2DB78F0B39A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,22 @@ Global
 		{FC062592-5005-471A-8FC6-6E50D12CD35B}.Release|x64.Build.0 = Release|Any CPU
 		{FC062592-5005-471A-8FC6-6E50D12CD35B}.Release|x86.ActiveCfg = Release|Any CPU
 		{FC062592-5005-471A-8FC6-6E50D12CD35B}.Release|x86.Build.0 = Release|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Debug|arm64.Build.0 = Debug|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Debug|x64.Build.0 = Debug|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Debug|x86.Build.0 = Debug|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Release|arm64.ActiveCfg = Release|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Release|arm64.Build.0 = Release|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Release|x64.ActiveCfg = Release|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Release|x64.Build.0 = Release|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8838321-5954-4735-B0EF-2DB78F0B39A1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

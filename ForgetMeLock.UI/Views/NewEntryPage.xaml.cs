@@ -25,11 +25,11 @@ namespace ForgetMeLock.UI.Views
     /// </summary>
     public sealed partial class NewEntryPage : Page
     {
-        //public InputViewModel ViewModel { get; }
+        public InputViewModel ViewModel { get; }
         public NewEntryPage()
         {
             this.InitializeComponent();
-            //ViewModel = Ioc.Default.GetService<InputViewModel>();
+            ViewModel = Ioc.Default.GetService<InputViewModel>();
 
         }
 

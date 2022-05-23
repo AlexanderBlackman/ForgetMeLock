@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ForgetMeLock.Backend.Model;
 using ForgetMeLock.Backend.Contracts;
-
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace ForgetMeLock.Backend.ViewModels
 {
-    public class InputViewModel
+    public class InputViewModel : ObservableObject
     {
         public Mood selectedMood;
         private readonly IDataService dataService;

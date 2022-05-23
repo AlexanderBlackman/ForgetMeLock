@@ -8,16 +8,25 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ForgetMeLock.Backend.Data
 {
-    public class NoteContext: DbContext
+    public class NoteContext : DbContext
     {
+
+        public string DbPath { get; set; }
+
+        public NoteContext()
+        {
+            var folder = Environment.SpecialFolder.LocalApplicationData;
+            var path = Environment.GetFolderPath(folder);
+            DbPath = System.IO.Path.Join(path, "forgetmelock.db");
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("forgetmelock.db");
+            optionsBuilder.UseSqlite($"Data Source ={DbPath}");
         }
 
-        public NoteContext(DbContextOptions<NoteContext>options): base(options) { }
+        // public NoteContext(DbContextOptions<NoteContext> options) : base(options) { }
 
-        internal DbSet<Note> Notes { get; set; }
+        public DbSet<Note> Notes { get; set; }
     }
 }
