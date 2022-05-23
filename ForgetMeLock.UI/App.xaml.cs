@@ -43,6 +43,7 @@ namespace ForgetMeLock.UI
 
             this.InitializeComponent();
             Ioc.Default.ConfigureServices(new ServiceCollection()
+                .AddDbContext<NoteContext>()
                 .AddSingleton<IDataService, SqliteDS>()
                 .AddTransient<NotesDueViewModel>()
                 .AddTransient<InputViewModel>()
