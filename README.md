@@ -1,4 +1,4 @@
-WIP Will take at least three more days before it is even testable, let alone usable. I posted early to beat procrastination
+**Status** Currently work is paused until I become more comfortable with EFC
 
 **Goal:** Allow user to write notes to their future self, which will be hidden until the time comes. Notes will be categorised by 'emotion', and can be obscured by default until the user is mentally up for reading them.  Hopefully this will be useful stopping ruminating thoughts, or acting before they are ready.
 
